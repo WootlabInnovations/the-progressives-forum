@@ -301,19 +301,6 @@ const Form = () => {
                       <option value="male">Male</option>
                     </select>
                   </div>
-
-                  <div className="mb-6 w-full md:ml-8">
-                    <label className="w-full block text-xs text-dark">
-                      Date of Birth{" "}
-                    </label>
-                    <input
-                      type="date"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      name="dateOfBirth"
-                      value={formInput?.dateOfBirth}
-                      onChange={handleChange}
-                    />
-                  </div>
                 </div>
 
                 <div className="mb-0">
