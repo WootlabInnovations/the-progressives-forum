@@ -4,8 +4,9 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]"
+      className="relative overflow-hidden bg-[rgba(0,0,0,0.7)] pt-[120px] md:pt-[130px] lg:pt-[160px]"
     >
+      <img src="/assets/images/picture-2.jpeg" className='absolute -z-10 top-0 left-0 w-full h-full' alt="" />
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4">
@@ -35,9 +36,9 @@ const Hero = () => {
               </ul>
               <div className="wow fadeInUp text-center" data-wow-delay=".3s">
                 <img
-                  src="assets/images/hero/brand.svg"
+                  src="assets/images/logo/apc-logo-1.png"
                   alt="image"
-                  className="mx-auto w-full max-w-[250px] opacity-50 transition duration-300 ease-in-out hover:opacity-100"
+                  className="mx-auto rounded-full w-full max-w-[50px] transition duration-300 ease-in-out hover:opacity-100"
                 />
               </div>
             </div>
@@ -50,7 +51,7 @@ const Hero = () => {
             >
               <div className="mt-16">
                 <img
-                  src="assets/images/hero/hero-image.jpg"
+                  src="assets/images/picture-3.webp"
                   alt="hero"
                   className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                 />

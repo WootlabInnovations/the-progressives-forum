@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import React from 'react'
 import Features from '../components/Features'
+import Faq from '../components/Faq'
 
 
 const Home: NextPage = () => {
@@ -17,8 +18,9 @@ const Home: NextPage = () => {
     <React.Fragment>
       <Nav />
       <Hero />
-      <Features />
       <About />
+      <Features />
+      <Faq />
     </React.Fragment>
   );
 }

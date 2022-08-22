@@ -8,18 +8,17 @@ const Features = () => {
           <div className="w-full px-4">
             <div className="mb-12 max-w-[620px] lg:mb-20">
               <span className="mb-2 block text-lg font-semibold text-primary">
-                Features
+                Purpose
               </span>
               <h2
                 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
               >
-                Main Features Of Play
+                Main Purpose Of The Platform
               </h2>
               <p
                 className="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
               >
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration in some form.
+                There are many variations of purposes why this platform came about but lorem ipsum features
               </p>
             </div>
           </div>
@@ -47,13 +46,13 @@ const Features = () => {
                 </svg>
               </div>
               <h4 className="mb-3 text-xl font-bold text-dark">
-                Free and Open-Source
+                Free and Open Advice
               </h4>
               <p className="mb-8 text-body-color lg:mb-11">
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
-                href="javascript:void(0)"
+                href=""
                 className="text-base font-medium text-body-color hover:text-primary"
               >
                 Learn More
@@ -85,13 +84,13 @@ const Features = () => {
                 </svg>
               </div>
               <h4 className="mb-3 text-xl font-bold text-dark">
-                Multipurpose Template
+                Structure and Purpose
               </h4>
               <p className="mb-8 text-body-color lg:mb-11">
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
-                href="javascript:void(0)"
+                href=""
                 className="text-base font-medium text-body-color hover:text-primary"
               >
                 Learn More
@@ -138,7 +137,7 @@ const Features = () => {
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
-                href="javascript:void(0)"
+                href=""
                 className="text-base font-medium text-body-color hover:text-primary"
               >
                 Learn More
@@ -176,7 +175,7 @@ const Features = () => {
                 Lorem Ipsum is simply dummy text of the printing and industry.
               </p>
               <a
-                href="javascript:void(0)"
+                href=""
                 className="text-base font-medium text-body-color hover:text-primary"
               >
                 Learn More
