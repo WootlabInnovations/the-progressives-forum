@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Form from '../components/form'
 import Hero from '../components/Hero'
 import Nav from '../components/nav'
 import styles from '../styles/Home.module.css'
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       {/* ---- Hero start ---- */}
       <Hero />
       {/* ----- Hero End ---- */}
+      <Form />
     </div>
   );
 }
