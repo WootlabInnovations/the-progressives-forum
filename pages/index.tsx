@@ -1,12 +1,20 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Hero from '../components/Hero'
+import Nav from '../components/nav'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-white flex justify-center items-center min-h-screen min-w-full'>
-      <h1>Hello world</h1>
+    <div className='bg-black'>
+      {/* ---- Nav start ------ */}
+      <Nav />
+      {/* ---- Nav End ----- */}
+      
+      {/* ---- Hero start ---- */}
+      <Hero />
+      {/* ----- Hero End ---- */}
     </div>
   );
 }
