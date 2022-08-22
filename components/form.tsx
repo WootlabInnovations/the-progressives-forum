@@ -3,57 +3,80 @@ import React, { useEffect, useState } from 'react'
 
 const Form = () => {
 
+    interface IForm {
+        name: string,
+        phone: string,
+        email: string,
+        cardNumber: string,
+        stateOfOrigin: string,
+        lgaOfOrigin: string,
+        stateOfResidence: string,
+        lgaOfResidence: string,
+        gender: string,
+        dateOfBirth: string,
+    }
+
     const [state, setState] = useState<any>();
     const [lga, setLga] = useState<any>();
-    const [selected, setSelected] = useState<string>("")
-    const [form, setForm] = useState<any>({
-        stateOrigin: "",
-        lgaOrigin: "",
-        stateResidence: "",
-        lgaResidence: ""
-    })
+    const [residenceLga, setResidenceLga] = useState<any>();
+    const [formInput, setFormInput] = useState<IForm>();
  
+     const handleChange = (e: any) => {
+         const { value, name } = e.target;
+         
+         setFormInput(():any => {
+             return {
+                 ...formInput,
+                 [name]: value
+             }
+         })
+     };
+
+    const saveForm = (e:any) => {
+        e.preventDefault()
+    }
     
     useEffect(() => {
         axios
           .get("https://locationsng-api.herokuapp.com/api/v1/states")
           .then(function (response) {
               setState(response?.data)
-              console.log(state)
           })
           .catch(function (error) {
             console.log(error);
           })
-          .then(function () {
-          });
     }, [])
 
-
-    const handleChange = (e: any) => {
-      console.log(e.target.value);
-      setSelected(e.target.value);
-    };
-
-
     useEffect(() => {
-        if (selected) {
+        if (formInput?.stateOfOrigin) {
               axios
                 .get(
-                  `https://locationsng-api.herokuapp.com/api/v1/states/${selected}/lgas`
+                  `https://locationsng-api.herokuapp.com/api/v1/states/${formInput?.stateOfOrigin}/lgas`
                 )
-                  .then(function (response) {
-                    console.log(response?.data)
+                .then(function (response) {
                   setLga(response?.data);
                 })
                 .catch(function (error) {
                   console.log(error);
                 })
-                .then(function () {
-                  // always executed
-                });
          }
       
-     }, [selected]);
+    }, [formInput?.stateOfOrigin]);
+
+      useEffect(() => {
+        if (formInput?.stateOfResidence) {
+          axios
+            .get(
+              `https://locationsng-api.herokuapp.com/api/v1/states/${formInput?.stateOfResidence}/lgas`
+            )
+            .then(function (response) {
+              setResidenceLga(response?.data);
+            })
+            .catch(function (error) {
+              console.log(error);
+            })
+        }
+      }, [formInput?.stateOfResidence]);
     
   return (
     <div>
@@ -61,7 +84,7 @@ const Form = () => {
         <div className="absolute top-0 left-0 z-[-1] h-1/2 w-full bg-[#f3f4fe] lg:h-[45%] xl:h-1/2"></div>
         <div className="container px-4">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+            <div className="w-full px-4 lg:w-6/12 xl:w-6/12">
               <div className="ud-contact-content-wrapper">
                 <div className="ud-contact-title mb-12 lg:mb-[150px]">
                   <span className="mb-5 text-base font-semibold text-dark">
@@ -120,139 +143,184 @@ const Form = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+            <div className="w-full px-4 lg:w-6/12 xl:w-6/12">
               <div
                 className="wow fadeInUp rounded-lg bg-white py-10 px-8 shadow-testimonial sm:py-12 sm:px-10 md:p-[60px] lg:p-10 lg:py-12 lg:px-10 2xl:p-[60px]"
                 data-wow-delay=".2s
               "
               >
-                <h3 className="mb-8 text-2xl font-semibold md:text-[26px]">
+                <h3 className="mb-8 text-2xl font-semibold md:text-[26px] text-center">
                   Apply as a Member
                 </h3>
                 <form>
-                  <div className="mb-6">
-                    <input
-                      type="text"
-                      name="fullName"
-                      placeholder="Full Name *"
-                      required
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="Phone Number *"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <input
-                      type="text"
-                      name="card"
-                      placeholder="APC Membership Card Number"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <select
-                      name=""
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    >
-                      <option value="volvo">Gender</option>
-                      <option value="saab">Female</option>
-                      <option value="mercedes">Male</option>
-                    </select>
-                  </div>
-                  <div className="mb-6">
-                    <select
-                      name="stateOrigin"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      value={selected}
-                      onChange={handleChange}
-                    >
-                      <option value="volvo">State of Origin</option>
-                      {state?.map((item: any, index: number) => {
-                        return (
-                          <option value={item.name} key={index}>
-                            {item.name}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                  <div className="mb-6">
-                    <select
-                      name="lgaOrigin"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    >
-                      <option value="volvo">LGA of Origin</option>
-                      {lga?.map((item: any, index: number) => {
-                        return (
-                          <option value={item} key={index}>
-                            {item}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                  <div className="mb-6">
-                    <select
-                      name="stateResidence"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      value={selected}
-                      onChange={handleChange}
-                    >
-                      <option value="volvo">State of Residence</option>
-                      {state?.map((item: any, index: number) => {
-                        return (
-                          <option value={item.name} key={index}>
-                            {item.name}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                  <div className="mb-6">
-                    <select
-                      name="lgaResidence"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    >
-                      <option value="volvo">LGA of Residence</option>
-                      {lga?.map((item: any, index: number) => {
-                        return (
-                          <option value={item} key={index}>
-                            {item}
-                          </option>
-                        );
-                      })}
-                    </select>
+                  <div className="block md:flex">
+                    <div className="mb-6 w-full">
+                      <input
+                        type="text"
+                        placeholder="Full Name *"
+                        required
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        name="name"
+                        value={formInput?.name}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="mb-6 w-full md:ml-8">
+                      <input
+                        type="text"
+                        placeholder="Phone Number *"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        name="phone"
+                        value={formInput?.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
 
-                  <div className="mb-6">
-                    <label htmlFor="phone" className="block text-xs text-dark">
-                      Date of Birth{" "}
-                    </label>
-                    <input
-                      type="date"
-                      name="date"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                    />
+                  <div className="block md:flex">
+                    <div className="mb-6 w-full">
+                      <input
+                        type="email"
+                        placeholder="Email"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        name="email"
+                        value={formInput?.email}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="mb-6 w-full md:ml-8">
+                      <input
+                        type="text"
+                        placeholder="APC Membership Card Number"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        name="cardNumber"
+                        value={formInput?.cardNumber}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="block md:flex">
+                    <div className="mb-6 w-full">
+                      <select
+                        name="stateOfOrigin"
+                        required
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        value={formInput?.stateOfOrigin}
+                        onChange={handleChange}
+                      >
+                        <option value="" disabled selected>
+                          State of Origin
+                        </option>
+                        {state?.map((item: any, index: number) => {
+                          return (
+                            <option value={item.name} key={index}>
+                              {item.name}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </div>
+                    <div className="mb-6 w-full md:ml-8">
+                      <select
+                        required
+                        name="lgaOfOrigin"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        value={formInput?.lgaOfOrigin}
+                        onChange={handleChange}
+                      >
+                        <option value="" disabled selected>
+                          LGA of Origin
+                        </option>
+                        {lga?.map((item: any, index: number) => {
+                          return (
+                            <option value={item} key={index}>
+                              {item}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </div>
+                  </div>
+                  <div className="block md:flex">
+                    <div className="mb-6 w-full">
+                      <select
+                        required
+                        name="stateOfResidence"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        value={formInput?.stateOfResidence}
+                        onChange={handleChange}
+                      >
+                        <option value="" disabled selected>
+                          State of Residence
+                        </option>
+                        {state?.map((item: any, index: number) => {
+                          return (
+                            <option value={item.name} key={index}>
+                              {item.name}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </div>
+                    <div className="mb-6 w-full md:ml-8">
+                      <select
+                        required
+                        name="lgaOfResidence"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        value={formInput?.lgaOfResidence}
+                        onChange={handleChange}
+                      >
+                        <option value="" disabled selected>
+                          LGA of Residence
+                        </option>
+                        {residenceLga?.map((item: any, index: number) => {
+                          return (
+                            <option value={item} key={index}>
+                              {item}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="block md:flex items-end">
+                    <div className="mb-6 w-full">
+                      <select
+                        required
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        name="gender"
+                        value={formInput?.gender}
+                        onChange={handleChange}
+                      >
+                        <option value="" disabled selected>
+                          Gender
+                        </option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                      </select>
+                    </div>
+
+                    <div className="mb-6 w-full md:ml-8">
+                      <label className="w-full block text-xs text-dark">
+                        Date of Birth{" "}
+                      </label>
+                      <input
+                        type="date"
+                        className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
+                        name="dateOfBirth"
+                        value={formInput?.dateOfBirth}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
 
                   <div className="mb-0">
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-dark"
+                      className="w-full inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-dark"
+                      onClick={saveForm}
                     >
                       Register
                     </button>
