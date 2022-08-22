@@ -8,5 +8,4 @@ export interface IForm {
   stateOfResidence: string;
   lgaOfResidence: string;
   gender: string;
-  dateOfBirth: string;
 }

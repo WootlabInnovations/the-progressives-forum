@@ -38,10 +38,6 @@ const memberSchema = new Schema({
     type: String,
     required: true,
   },
-  dateOfBirth: {
-    type: String,
-    required: true,
-  },
 });
 
 export default models.Member || model<IForm & Document>('Member', memberSchema); 
