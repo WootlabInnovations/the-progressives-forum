@@ -33,7 +33,8 @@ const Form = () => {
      };
 
     const saveForm = (e:any) => {
-        e.preventDefault()
+        e.preventDefault();
+        console.log(formInput)
     }
     
     useEffect(() => {
