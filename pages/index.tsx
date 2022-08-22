@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Form from '../components/form'
 import About from '../components/About'
 import Hero from '../components/Hero'
 import Nav from '../components/nav'
@@ -17,6 +18,8 @@ const Home: NextPage = () => {
     <React.Fragment>
       <Nav />
       <Hero />
+      {/* ----- Hero End ---- */}
+      <Form />
       <Features />
       <About />
     </React.Fragment>
