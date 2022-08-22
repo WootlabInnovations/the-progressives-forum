@@ -12,6 +12,8 @@ import React from 'react'
 import Features from '../components/Features'
 import Faq from '../components/Faq'
 import Form from '../components/form'
+import Team from '../components/Team'
+import Mission from '../components/Mission'
 
 
 const Home: NextPage = () => {
@@ -21,6 +23,8 @@ const Home: NextPage = () => {
       <Hero />
       <About />
       <Features />
+      <Team />
+      <Mission />
       <Faq />
       <Form />
     </React.Fragment>

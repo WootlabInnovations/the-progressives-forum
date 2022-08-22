@@ -27,7 +27,7 @@ const Hero = () => {
               <ul className="mb-10 flex flex-wrap items-center justify-center">
                 <li>
                   <a
-                    href="https://links.tailgrids.com/play-download"
+                    href="#form"
                     className="inline-flex items-center justify-center rounded-lg bg-white py-4 px-6 text-center text-base font-medium text-dark transition duration-300 ease-in-out hover:text-primary hover:shadow-lg sm:px-10"
                   >
                     Membership

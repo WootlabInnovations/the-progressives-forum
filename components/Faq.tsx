@@ -3,6 +3,7 @@ import React from 'react'
 const Faq = () => {
   return (
     <section
+      id='faq'
       className="relative z-20 overflow-hidden bg-[#f3f4ff] pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
     >
       <div className="container">
@@ -53,16 +54,15 @@ const Faq = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-base font-semibold text-black sm:text-lg">
-                    How to use TailGrids?
+                    How do I become a member?
                   </h4>
                 </div>
               </summary>
               <div className="pl-[62px]">
                 <p className="py-3 text-base leading-relaxed text-body-color">
-                  It takes 2-3 weeks to get your first blog post ready. That
-                  includes the in-depth research & creation of your monthly
-                  content marketing strategy that we do before writing your
-                  first blog post, Ipsum available .
+                  It takes 2-3 weeks to get your membership ready. That
+                  includes the in-depth research and vetting of your details that we do before
+                  accepting, Ipsum available .
                 </p>
               </div>
             </details>
@@ -90,25 +90,24 @@ const Faq = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-base font-semibold text-black sm:text-lg">
-                    How to download icons from LineIcons?
+                    How to membership will benefit one
                   </h4>
                 </div>
               </summary>
               <div className="pl-[62px]">
                 <p className="py-3 text-base leading-relaxed text-body-color">
-                  It takes 2-3 weeks to get your first blog post ready. That
-                  includes the in-depth research & creation of your monthly
-                  content marketing strategy that we do before writing your
-                  first blog post, Ipsum available .
+                  It takes 2-3 weeks to get your membership ready. That
+                  includes the in-depth research and vetting of your details that we do before
+                  accepting, Ipsum available .
                 </p>
               </div>
             </details>
-            <div
+            <details
               className="single-faq wow fadeInUp mb-8 w-full rounded-lg border border-[#F3F4FE] bg-white p-5 sm:p-8"
               data-wow-delay=".2s
               "
             >
-              <button className="faq-btn flex w-full items-center text-left">
+              <summary className="faq-btn cursor-pointer flex w-full items-center text-left">
                 <div
                   className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary bg-opacity-5 text-primary"
                 >
@@ -127,27 +126,26 @@ const Faq = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-base font-semibold text-black sm:text-lg">
-                    Is GrayGrids part of UIdeck?
+                    lorem ipmsum available
                   </h4>
                 </div>
-              </button>
-              <div className="faq-content hidden pl-[62px]">
+              </summary>
+              <div className="pl-[62px]">
                 <p className="py-3 text-base leading-relaxed text-body-color">
-                  It takes 2-3 weeks to get your first blog post ready. That
-                  includes the in-depth research & creation of your monthly
-                  content marketing strategy that we do before writing your
-                  first blog post, Ipsum available .
+                  It takes 2-3 weeks to get your membership ready. That
+                  includes the in-depth research and vetting of your details that we do before
+                  accepting, Ipsum available .
                 </p>
               </div>
-            </div>
+            </details>
           </div>
           <div className="w-full px-4 lg:w-1/2">
-            <div
+            <details
               className="single-faq wow fadeInUp mb-8 w-full rounded-lg border border-[#F3F4FE] bg-white p-5 sm:p-8"
               data-wow-delay=".1s
               "
             >
-              <button className="faq-btn flex w-full items-center text-left">
+              <summary className="faq-btn cursor-pointer flex w-full items-center text-left">
                 <div
                   className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary bg-opacity-5 text-primary"
                 >
@@ -166,25 +164,24 @@ const Faq = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-base font-semibold text-black sm:text-lg">
-                    Can I use this template for commercial project?
+                    How long does it take to become a member?
                   </h4>
                 </div>
-              </button>
-              <div className="faq-content hidden pl-[62px]">
+              </summary>
+              <div className="pl-[62px]">
                 <p className="py-3 text-base leading-relaxed text-body-color">
-                  It takes 2-3 weeks to get your first blog post ready. That
-                  includes the in-depth research & creation of your monthly
-                  content marketing strategy that we do before writing your
-                  first blog post, Ipsum available .
+                  It takes 2-3 weeks to get your membership ready. That
+                  includes the in-depth research and vetting of your details that we do before
+                  accepting, Ipsum available .
                 </p>
               </div>
-            </div>
-            <div
+            </details>
+            <details
               className="single-faq wow fadeInUp mb-8 w-full rounded-lg border border-[#F3F4FE] bg-white p-5 sm:p-8"
               data-wow-delay=".15s
               "
             >
-              <button className="faq-btn flex w-full items-center text-left">
+              <summary className="faq-btn cursor-pointer flex w-full items-center text-left">
                 <div
                   className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary bg-opacity-5 text-primary"
                 >
@@ -203,25 +200,24 @@ const Faq = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-base font-semibold text-black sm:text-lg">
-                    Do you have plan to releasing Play Pro?
+                    Is there a price attached to becoming a member?
                   </h4>
                 </div>
-              </button>
-              <div className="faq-content hidden pl-[62px]">
+              </summary>
+              <div className="pl-[62px]">
                 <p className="py-3 text-base leading-relaxed text-body-color">
-                  It takes 2-3 weeks to get your first blog post ready. That
-                  includes the in-depth research & creation of your monthly
-                  content marketing strategy that we do before writing your
-                  first blog post, Ipsum available .
+                  It takes 2-3 weeks to get your membership ready. That
+                  includes the in-depth research and vetting of your details that we do before
+                  accepting, Ipsum available .
                 </p>
               </div>
-            </div>
-            <div
+            </details>
+            <details
               className="single-faq wow fadeInUp mb-8 w-full rounded-lg border border-[#F3F4FE] bg-white p-5 sm:p-8"
               data-wow-delay=".2s
               "
             >
-              <button className="faq-btn flex w-full items-center text-left">
+              <summary className="faq-btn cursor-pointer flex w-full items-center text-left">
                 <div
                   className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary bg-opacity-5 text-primary"
                 >
@@ -240,19 +236,18 @@ const Faq = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-base font-semibold text-black sm:text-lg">
-                    Where and how to host this template?
+                    Where and how do I apply to be a member?
                   </h4>
                 </div>
-              </button>
-              <div className="faq-content hidden pl-[62px]">
+              </summary>
+              <div className="pl-[62px]">
                 <p className="py-3 text-base leading-relaxed text-body-color">
-                  It takes 2-3 weeks to get your first blog post ready. That
-                  includes the in-depth research & creation of your monthly
-                  content marketing strategy that we do before writing your
-                  first blog post, Ipsum available .
+                  It takes 2-3 weeks to get your membership ready. That
+                  includes the in-depth research and vetting of your details that we do before
+                  accepting, Ipsum available .
                 </p>
               </div>
-            </div>
+            </details>
           </div>
         </div>
       </div>
@@ -279,9 +274,9 @@ const Faq = () => {
               y2="-418.681"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#3056D3" stop-opacity="0.36" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0" />
-              <stop offset="1" stop-color="#F5F2FD" stop-opacity="0.096144" />
+              <stop stopColor="#3056D3" stopOpacity="0.36" />
+              <stop offset="1" stopColor="#F5F2FD" stopOpacity="0" />
+              <stop offset="1" stopColor="#F5F2FD" stopOpacity="0.096144" />
             </linearGradient>
           </defs>
         </svg>

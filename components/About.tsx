@@ -27,13 +27,13 @@ const About = () => {
                     Brilliant Forum to Build Nextgen Politicians.
                   </h2>
                   <p className="mb-9 text-base leading-relaxed text-body-color">
-                    The main ‘thrust' is to focus on educating members on how
+                    The main &apos;thrust&apos; is to focus on educating members on how
                     to best protect highly vulnerable politics interest with
                     interactive panel discussions and roundtables led by subject
                     matter experts.
                   </p>
                   <p className="mb-9 text-base leading-relaxed text-body-color">
-                    The main ‘thrust' is to focus on educating attendees on how
+                    The main &apos;thrust&apos; is to focus on educating attendees on how
                     to best protect highly vulnerable business applications with
                     interactive panel.
                   </p>

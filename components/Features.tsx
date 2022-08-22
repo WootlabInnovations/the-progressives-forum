@@ -131,7 +131,7 @@ const Features = () => {
                 </svg>
               </div>
               <h4 className="mb-3 text-xl font-bold text-dark">
-                High-quality Design
+                Sustainability Of Party
               </h4>
               <p className="mb-8 text-body-color lg:mb-11">
                 Lorem Ipsum is simply dummy text of the printing and industry.
@@ -169,7 +169,7 @@ const Features = () => {
                 </svg>
               </div>
               <h4 className="mb-3 text-xl font-bold text-dark">
-                All Essential Elements
+                Party Synergy
               </h4>
               <p className="mb-8 text-body-color lg:mb-11">
                 Lorem Ipsum is simply dummy text of the printing and industry.
