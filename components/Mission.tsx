@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mission = () => {
   return (
-    <section id="testimonials" className="pt-20 md:pt-[120px]">
+    <section id="mission" className="pt-20 md:pt-[120px]">
       <div className="container px-4">
         <div className="flex flex-wrap">
           <div className="mx-4 w-full">
