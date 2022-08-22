@@ -11,6 +11,7 @@ import 'swiper/css/scrollbar';
 import React from 'react'
 import Features from '../components/Features'
 import Faq from '../components/Faq'
+import Form from '../components/form'
 
 
 const Home: NextPage = () => {
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
       <About />
       <Features />
       <Faq />
+      <Form />
     </React.Fragment>
   );
 }

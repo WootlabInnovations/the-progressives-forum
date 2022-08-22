@@ -33,3 +33,18 @@ a {
     background: black;
   }
 } */
+
+select:required:invalid {
+  color: #A8AFB9;
+}
+
+select{
+ cursor: pointer;
+}
+option[value=""][disabled] {
+  color: #A8AFB9;
+}
+
+option {
+  color: black;
+}
