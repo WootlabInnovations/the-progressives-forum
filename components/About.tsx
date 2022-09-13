@@ -4,39 +4,32 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#f3f4fe] pt-20 pb-20 lg:pt-[120px] lg:pb-[120px]"
+      className="bg-[#f3f4fe] pt-20 pb-20 lg:pt-[120px] lg:pb-[120px] h-auto"
     >
       <div className="container">
         <div className="wow fadeInUp bg-white" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div
-                className="items-center justify-between overflow-hidden md:overflow-visible border lg:flex"
+                className="items-center justify-between overflow-hidden md:overflow-hidden border lg:flex p-12"
               >
                 <div
                   className="w-full py-12 px-7 sm:px-12 md:p-16 lg:max-w-[565px] lg:py-9 lg:px-16 xl:max-w-[640px] xl:p-[70px]"
                 >
                   <span
-                    className="mb-5 rounded-md inline-block bg-primary py-2 px-5 text-sm font-medium text-white"
+                    className="mb-5 rounded-md inline-block py-2  text-2xl font-medium text-black"
                   >
-                    About The Forum
+                    About Birdway Synergy
                   </span>
-                  <h2
-                    className="mb-6 text-3xl font-bold text-dark sm:text-4xl sm:leading-snug 2xl:text-[40px]"
-                  >
-                    Brilliant Forum to Build Nextgen Politicians.
-                  </h2>
+              
                   <p className="mb-9 text-base leading-relaxed text-body-color">
-                    The main &apos;thrust&apos; is to focus on educating members on how
-                    to best protect highly vulnerable politics interest with
-                    interactive panel discussions and roundtables led by subject
-                    matter experts.
+                    Bridway Synergy is an Agtech company that specializes in providing unique and high-quality agricultural inputs, and services and managing agricultural investment and research projects. 
+                    The company also help family farmers maximize their farm’s profit potential.
+                     Bridway’s game-changing platform leverages technology to help reduce the cost of production, maximize the value of crops and make confident decisions to improve the bottom line - all in one place. 
+                     Bridway was established in 2018, with a vision that aspires to drive our customers’ ambitions towards a future food security, and a green world.
+
                   </p>
-                  <p className="mb-9 text-base leading-relaxed text-body-color">
-                    The main &apos;thrust&apos; is to focus on educating attendees on how
-                    to best protect highly vulnerable business applications with
-                    interactive panel.
-                  </p>
+            
                   <a
                     href=""
                     className="inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg"
@@ -44,12 +37,12 @@ const About = () => {
                     Learn More
                   </a>
                 </div>
-                <div className="text-center -mr-16">
-                  <div className="relative z-10 inline-block">
+                <div className="text-center -mr-16 pr-6">
+                  <div className="relative z-10 inline-block p-16">
                     <img
-                      src="assets/images/picture-2.jpeg"
+                      src="assets/images/mission/picture2.jpeg"
                       alt="image"
-                      className="mx-auto lg:ml-auto"
+                      className="mx-auto lg:ml-auto h-[400px]"
                     />
                   </div>
                 </div>

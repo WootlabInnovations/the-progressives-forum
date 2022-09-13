@@ -11,16 +11,14 @@ const Mission = () => {
                 Our Mission
               </span>
               <h2
-                className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+                className="mb-4 text-2xl font-bold text-dark sm:text-2xl md:text-[22px]"
               >
                 What we set out to achieve
               </h2>
               <p
-                className="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
+                className="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed text-left"
               >
-                We set out to unite the whole youths of
-                the all progressive congress to a single broom and
-                challenge ourselves to choose and bring out the very best of us.
+                To actualize the allegation that the Agricultural sector of the Nigerian economy is  capable of becoming once again, the greatest Gross Domestic Product earner like it used to be in the pre and immediate post-independence years.
               </p>
             </div>
           </div>

@@ -11,13 +11,13 @@ const Nav: NextPage = () => {
             <div className="w-60 max-w-full px-4">
             <a href="index.html" className="navbar-logo">
                 <img
-                  src="assets/images/logo/logo2.png"
+                  src="/assets/images/birdWayLogo.png"
                   alt="logo"
-                className="header-logo h-[120px] md:rounded-full md:bg-white text-center md:mt-2"
+                className="header-logo h-[120px] md:rounded-[20px] md:bg-white text-center md:mt-6"
                 />
               </a>
             </div>
-              <div>
+              <div className=''>
                 <button
                   id="navbarToggler"
                   className="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
@@ -66,7 +66,15 @@ const Nav: NextPage = () => {
                         href="#team"
                         className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
                       >
-                        Team
+                        Services
+                      </a>
+                    </li>
+                    <li className="group relative">
+                      <a
+                        href="#team"
+                        className="ud-menu-scroll mx-8 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:ml-7 lg:inline-flex lg:py-6 lg:px-0 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-12"
+                      >
+                        Values
                       </a>
                     </li>
                     <li className="group relative">
@@ -91,9 +99,9 @@ const Nav: NextPage = () => {
               <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
                 <a
                   href="#form"
-                  className="signUpBtn rounded-lg bg-white bg-opacity-20 py-3 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
+                  className="signUpBtn rounded-lg  py-3 px-6 text-base font-medium text-white duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                 >
-                  Apply for Membership
+                  {/* Apply for Membership */}
                 </a>
               </div>
 

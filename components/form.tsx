@@ -87,12 +87,12 @@ const Form = () => {
             <div className="ud-contact-content-wrapper">
               <div className="ud-contact-title mb-12 lg:mb-[150px]">
                 <span className="mb-5 text-base font-semibold text-dark">
-                  Become A Member
+                  Leave Us A Message
                 </span>
                 <h2 className="text-[35px] font-semibold">
-                  Register to become <br />
-                  A Memeber and Rip Off The <br />
-                  Membership Benefit
+                  Have a message? <br />
+                  Fill out the form <br />
+                  to leave your message
                 </h2>
               </div>
               <div className="mb-12 flex flex-wrap justify-between lg:mb-0">
@@ -150,7 +150,7 @@ const Form = () => {
               "
             >
               <h3 className="mb-8 text-2xl font-semibold md:text-[26px] text-center">
-                Apply as a Member
+                Contact us
               </h3>
               <form onSubmit={handleSubmit}>
                 <div className="block md:flex">
@@ -191,117 +191,25 @@ const Form = () => {
                   <div className="mb-6 w-full md:ml-8">
                     <input
                       type="text"
-                      placeholder="APC Membership Card Number"
+                      placeholder="Subject"
                       className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      name="cardNumber"
-                      value={formInput?.cardNumber}
-                      onChange={handleChange}
+                      // name="cardNumber"
+                      // value={formInput?.cardNumber}
+                      // onChange={handleChange}
                     />
                   </div>
+                  
                 </div>
-
-                <div className="block md:flex">
-                  <div className="mb-6 w-full">
-                    <select
-                      name="stateOfOrigin"
-                      required
+                <div className="mb-6 w-full md:ml-6">
+                    <input
+                      type="text"
+                      placeholder="Message"
                       className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      value={formInput?.stateOfOrigin}
-                      onChange={handleChange}
-                    >
-                      <option value="" disabled selected>
-                        State of Origin
-                      </option>
-                      {state?.map((item: any, index: number) => {
-                        return (
-                          <option value={item.name} key={index}>
-                            {item.name}
-                          </option>
-                        );
-                      })}
-                    </select>
+                      // name="cardNumber"
+                      // value={formInput?.cardNumber}
+                      // onChange={handleChange}
+                    />
                   </div>
-                  <div className="mb-6 w-full md:ml-8">
-                    <select
-                      required
-                      name="lgaOfOrigin"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      value={formInput?.lgaOfOrigin}
-                      onChange={handleChange}
-                    >
-                      <option value="" disabled selected>
-                        LGA of Origin
-                      </option>
-                      {lga?.map((item: any, index: number) => {
-                        return (
-                          <option value={item} key={index}>
-                            {item}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                </div>
-                <div className="block md:flex">
-                  <div className="mb-6 w-full">
-                    <select
-                      required
-                      name="stateOfResidence"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      value={formInput?.stateOfResidence}
-                      onChange={handleChange}
-                    >
-                      <option value="" disabled selected>
-                        State of Residence
-                      </option>
-                      {state?.map((item: any, index: number) => {
-                        return (
-                          <option value={item.name} key={index}>
-                            {item.name}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                  <div className="mb-6 w-full md:ml-8">
-                    <select
-                      required
-                      name="lgaOfResidence"
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      value={formInput?.lgaOfResidence}
-                      onChange={handleChange}
-                    >
-                      <option value="" disabled selected>
-                        LGA of Residence
-                      </option>
-                      {residenceLga?.map((item: any, index: number) => {
-                        return (
-                          <option value={item} key={index}>
-                            {item}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  </div>
-                </div>
-
-                <div className="block md:flex items-end">
-                  <div className="mb-6 w-full">
-                    <select
-                      required
-                      className="w-full border-0 border-b border-[#f1f1f1] py-4 focus:border-primary focus:outline-none"
-                      name="gender"
-                      value={formInput?.gender}
-                      onChange={handleChange}
-                    >
-                      <option value="" disabled selected>
-                        Gender
-                      </option>
-                      <option value="female">Female</option>
-                      <option value="male">Male</option>
-                    </select>
-                  </div>
-                </div>
 
                 <div className="mb-0">
                   <button
@@ -309,7 +217,7 @@ const Form = () => {
                     className="w-full inline-flex items-center justify-center rounded bg-primary py-4 px-6 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-dark"
                   >
                     {
-                      !loading ? "Register" : "Loading..."
+                      !loading ? "Send" : "Loading..."
                     }
                   </button>
                 </div>
